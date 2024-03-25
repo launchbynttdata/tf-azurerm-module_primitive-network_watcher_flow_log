@@ -26,7 +26,7 @@ module "network_watcher_flow_log" {
 
 }
 module "network_security_group" {
-  source = "git::https://github.com/nexient-llc/tf-azurerm-module_primitive-network_security_group.git?ref=0.1.1"
+  source = "git::https://github.com/launchbynttdata/tf-azurerm-module_primitive-network_security_group.git?ref=1.0.0"
 
   name                = local.network_security_group_name
   location            = var.location
@@ -37,7 +37,7 @@ module "network_security_group" {
 
 
 module "storage_account" {
-  source = "git::https://github.com/nexient-llc/tf-azurerm-module_primitive-storage_account.git?ref=0.2.1"
+  source = "git::https://github.com/launchbynttdata/tf-azurerm-module_primitive-storage_account.git?ref=1.0.0"
 
   storage_account_name = local.storage_account_name
   resource_group_name  = module.resource_group.name
@@ -54,7 +54,7 @@ module "storage_account" {
 
 
 module "network_watcher" {
-  source = "git::https://github.com/nexient-llc/tf-azurerm-module_primitive-network_watcher.git?ref=0.1.0"
+  source = "git::https://github.com/launchbynttdata/tf-azurerm-module_primitive-network_watcher.git?ref=1.0.0"
 
   network_watcher_name = local.network_watcher_name
   location             = var.location
@@ -64,7 +64,7 @@ module "network_watcher" {
 }
 
 module "resource_group" {
-  source = "git::https://github.com/nexient-llc/tf-azurerm-module_primitive-resource_group.git?ref=0.2.1"
+  source = "git::https://github.com/launchbynttdata/tf-azurerm-module_primitive-resource_group.git?ref=1.0.0"
 
   name     = local.resource_group_name
   location = var.location
@@ -74,7 +74,7 @@ module "resource_group" {
 }
 
 module "log_analytics_workspace" {
-  source = "git::https://github.com/nexient-llc/tf-azurerm-module_primitive-log_analytics_workspace.git?ref=0.1.1"
+  source = "git::https://github.com/launchbynttdata/tf-azurerm-module_primitive-log_analytics_workspace.git?ref=1.0.0"
 
   name                = local.log_analytics_workspace_name
   location            = var.location
@@ -87,7 +87,7 @@ module "log_analytics_workspace" {
 }
 
 module "resource_names" {
-  source = "git::https://github.com/nexient-llc/tf-module-resource_name.git?ref=1.1.1"
+  source = "git::https://github.com/launchbynttdata/tf-launch-module_library-resource_name.git?ref=1.0.0"
 
   for_each = var.resource_names_map
 
