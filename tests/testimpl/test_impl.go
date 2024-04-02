@@ -2,36 +2,29 @@ package common
 
 import (
 	"context"
+	"os"
 	"testing"
 
-	"github.com/Azure/azure-sdk-for-go/sdk/azcore"
-	"github.com/Azure/azure-sdk-for-go/sdk/azcore/arm"
-	"github.com/Azure/azure-sdk-for-go/sdk/azcore/cloud"
 	"github.com/Azure/azure-sdk-for-go/sdk/azidentity"
 	armNetwork "github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/network/armnetwork/v5"
 	"github.com/gruntwork-io/terratest/modules/terraform"
-	"github.com/launchbynttdata/lcaf-component-terratest/lib/azure/login"
 	"github.com/launchbynttdata/lcaf-component-terratest/types"
 	"github.com/stretchr/testify/assert"
 )
 
 func TestNetworkWatcherFlowLog(t *testing.T, ctx types.TestContext) {
 
-	envVarMap := login.GetEnvironmentVariables()
-	subscriptionID := envVarMap["subscriptionID"]
+	subscriptionId := os.Getenv("ARM_SUBSCRIPTION_ID")
+	if len(subscriptionId) == 0 {
+		t.Fatal("ARM_SUBSCRIPTION_ID is not set in the environment variables ")
+	}
 
 	credential, err := azidentity.NewDefaultAzureCredential(nil)
 	if err != nil {
 		t.Fatalf("Unable to get credentials: %e\n", err)
 	}
 
-	options := arm.ClientOptions{
-		ClientOptions: azcore.ClientOptions{
-			Cloud: cloud.AzurePublic,
-		},
-	}
-
-	flowLogsClient, err := armNetwork.NewFlowLogsClient(subscriptionID, credential, &options)
+	flowLogsClient, err := armNetwork.NewFlowLogsClient(subscriptionId, credential, nil)
 	if err != nil {
 		t.Fatalf("Error getting Network Water client: %v", err)
 	}
