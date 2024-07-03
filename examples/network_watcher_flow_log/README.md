@@ -16,13 +16,13 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_network_watcher_flow_log"></a> [network\_watcher\_flow\_log](#module\_network\_watcher\_flow\_log) | d2lqlh14iel5k2.cloudfront.net/module_primitive/network_watcher_flow_log/azurerm | ~> 1.0 |
-| <a name="module_network_security_group"></a> [network\_security\_group](#module\_network\_security\_group) | d2lqlh14iel5k2.cloudfront.net/module_primitive/network_security_group/azurerm | ~> 1.0 |
-| <a name="module_storage_account"></a> [storage\_account](#module\_storage\_account) | d2lqlh14iel5k2.cloudfront.net/module_primitive/storage_account/azurerm | ~> 1.0 |
-| <a name="module_network_watcher"></a> [network\_watcher](#module\_network\_watcher) | d2lqlh14iel5k2.cloudfront.net/module_primitive/network_watcher/azurerm | ~> 1.0 |
-| <a name="module_resource_group"></a> [resource\_group](#module\_resource\_group) | d2lqlh14iel5k2.cloudfront.net/module_primitive/resource_group/azurerm | ~> 1.0 |
-| <a name="module_log_analytics_workspace"></a> [log\_analytics\_workspace](#module\_log\_analytics\_workspace) | d2lqlh14iel5k2.cloudfront.net/module_primitive/log_analytics_workspace/azurerm | ~> 1.0 |
-| <a name="module_resource_names"></a> [resource\_names](#module\_resource\_names) | d2lqlh14iel5k2.cloudfront.net/module_library/resource_name/launch | ~> 1.0 |
+| <a name="module_network_watcher_flow_log"></a> [network\_watcher\_flow\_log](#module\_network\_watcher\_flow\_log) | terraform.registry.launch.nttdata.com/module_primitive/network_watcher_flow_log/azurerm | ~> 1.0 |
+| <a name="module_network_security_group"></a> [network\_security\_group](#module\_network\_security\_group) | terraform.registry.launch.nttdata.com/module_primitive/network_security_group/azurerm | ~> 1.0 |
+| <a name="module_storage_account"></a> [storage\_account](#module\_storage\_account) | terraform.registry.launch.nttdata.com/module_primitive/storage_account/azurerm | ~> 1.0 |
+| <a name="module_network_watcher"></a> [network\_watcher](#module\_network\_watcher) | terraform.registry.launch.nttdata.com/module_primitive/network_watcher/azurerm | ~> 1.0 |
+| <a name="module_resource_group"></a> [resource\_group](#module\_resource\_group) | terraform.registry.launch.nttdata.com/module_primitive/resource_group/azurerm | ~> 1.0 |
+| <a name="module_log_analytics_workspace"></a> [log\_analytics\_workspace](#module\_log\_analytics\_workspace) | terraform.registry.launch.nttdata.com/module_primitive/log_analytics_workspace/azurerm | ~> 1.0 |
+| <a name="module_resource_names"></a> [resource\_names](#module\_resource\_names) | terraform.registry.launch.nttdata.com/module_library/resource_name/launch | ~> 1.0 |
 
 ## Resources
 

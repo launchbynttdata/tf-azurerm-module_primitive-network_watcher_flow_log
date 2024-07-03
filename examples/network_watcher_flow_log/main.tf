@@ -11,7 +11,7 @@
 // limitations under the License.
 
 module "network_watcher_flow_log" {
-  source  = "d2lqlh14iel5k2.cloudfront.net/module_primitive/network_watcher_flow_log/azurerm"
+  source  = "terraform.registry.launch.nttdata.com/module_primitive/network_watcher_flow_log/azurerm"
   version = "~> 1.0"
 
   network_watcher_flow_log_name = local.network_watcher_flow_log_name
@@ -27,7 +27,7 @@ module "network_watcher_flow_log" {
 
 }
 module "network_security_group" {
-  source  = "d2lqlh14iel5k2.cloudfront.net/module_primitive/network_security_group/azurerm"
+  source  = "terraform.registry.launch.nttdata.com/module_primitive/network_security_group/azurerm"
   version = "~> 1.0"
 
   name                = local.network_security_group_name
@@ -39,7 +39,7 @@ module "network_security_group" {
 
 
 module "storage_account" {
-  source  = "d2lqlh14iel5k2.cloudfront.net/module_primitive/storage_account/azurerm"
+  source  = "terraform.registry.launch.nttdata.com/module_primitive/storage_account/azurerm"
   version = "~> 1.0"
 
   storage_account_name = local.storage_account_name
@@ -57,7 +57,7 @@ module "storage_account" {
 
 
 module "network_watcher" {
-  source  = "d2lqlh14iel5k2.cloudfront.net/module_primitive/network_watcher/azurerm"
+  source  = "terraform.registry.launch.nttdata.com/module_primitive/network_watcher/azurerm"
   version = "~> 1.0"
 
   network_watcher_name = local.network_watcher_name
@@ -68,7 +68,7 @@ module "network_watcher" {
 }
 
 module "resource_group" {
-  source  = "d2lqlh14iel5k2.cloudfront.net/module_primitive/resource_group/azurerm"
+  source  = "terraform.registry.launch.nttdata.com/module_primitive/resource_group/azurerm"
   version = "~> 1.0"
 
   name     = local.resource_group_name
@@ -79,7 +79,7 @@ module "resource_group" {
 }
 
 module "log_analytics_workspace" {
-  source  = "d2lqlh14iel5k2.cloudfront.net/module_primitive/log_analytics_workspace/azurerm"
+  source  = "terraform.registry.launch.nttdata.com/module_primitive/log_analytics_workspace/azurerm"
   version = "~> 1.0"
 
   name                = local.log_analytics_workspace_name
@@ -93,7 +93,7 @@ module "log_analytics_workspace" {
 }
 
 module "resource_names" {
-  source  = "d2lqlh14iel5k2.cloudfront.net/module_library/resource_name/launch"
+  source  = "terraform.registry.launch.nttdata.com/module_library/resource_name/launch"
   version = "~> 1.0"
 
   for_each = var.resource_names_map
