@@ -14,15 +14,15 @@ module "network_watcher_flow_log" {
   source = "../.."
 
   network_watcher_flow_log_name = local.network_watcher_flow_log_name
-  network_watcher_name          = module.network_watcher.name
-  resource_group_name           = module.resource_group.name
+  network_watcher_name          = data.azurerm_network_watcher.this.name
+  resource_group_name           = data.azurerm_network_watcher.this.resource_group_name
   network_security_group_id     = module.network_security_group.network_security_group_id
   storage_account_id            = module.storage_account.id
   enabled                       = var.enabled
   retention_policy              = var.retention_policy
   traffic_analytics             = local.traffic_analytics
 
-  depends_on = [module.storage_account, module.network_security_group, module.network_watcher, module.resource_group, module.log_analytics_workspace]
+  depends_on = [module.storage_account, module.network_security_group, module.resource_group, module.log_analytics_workspace]
 
 }
 module "network_security_group" {
@@ -55,14 +55,9 @@ module "storage_account" {
 }
 
 
-module "network_watcher" {
-  source = "git::https://github.com/launchbynttdata/tf-azurerm-module_primitive-network_watcher.git?ref=feat%21/copier-conversion"
-
-  network_watcher_name = local.network_watcher_name
-  location             = var.location
-  resource_group_name  = module.resource_group.name
-
-  depends_on = [module.resource_group]
+data "azurerm_network_watcher" "this" {
+  name                = "NetworkWatcher_${var.location}"
+  resource_group_name = "NetworkWatcherRG"
 }
 
 module "resource_group" {
