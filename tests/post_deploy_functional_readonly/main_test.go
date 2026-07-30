@@ -26,6 +26,7 @@ const (
 )
 
 func TestNetworkWatcherFlowLogModule(t *testing.T) {
+	t.Skip("Azure blocks creation of new NSG flow logs (NsgFlowLogCreationBlocked, effective June 2025)")
 
 	ctx := types.CreateTestContextBuilder().
 		SetTestConfig(&testimpl.ThisTFModuleConfig{}).
@@ -34,7 +35,6 @@ func TestNetworkWatcherFlowLogModule(t *testing.T) {
 		SetTestSpecificFlags(map[string]types.TestFlags{
 			"network_watcher_flow_log": {
 				"IS_TERRAFORM_IDEMPOTENT_APPLY": true,
-				"SKIP_TEST":                     true,
 			},
 		}).
 		Build()
