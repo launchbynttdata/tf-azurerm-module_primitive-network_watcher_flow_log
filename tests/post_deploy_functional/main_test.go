@@ -38,5 +38,5 @@ func TestNetworkWatcherFlowLogModule(t *testing.T) {
 		}).
 		Build()
 
-	lib.RunSetupTestTeardown(t, *ctx, testimpl.TestNetworkWatcherFlowLog)
+	lib.RunSetupTestTeardown(t, *ctx, testimpl.TestComposableNetworkWatcherFlowLog)
 }

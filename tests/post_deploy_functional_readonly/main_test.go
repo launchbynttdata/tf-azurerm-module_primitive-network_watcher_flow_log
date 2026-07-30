@@ -38,5 +38,5 @@ func TestNetworkWatcherFlowLogModule(t *testing.T) {
 		}).
 		Build()
 
-	lib.RunNonDestructiveTest(t, *ctx, testimpl.TestNetworkWatcherFlowLog)
+	lib.RunNonDestructiveTest(t, *ctx, testimpl.TestComposableNetworkWatcherFlowLog)
 }
