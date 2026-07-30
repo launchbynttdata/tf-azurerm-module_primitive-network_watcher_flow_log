@@ -5,8 +5,9 @@
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | <= 1.10.4 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.0 |
 | <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~> 3.77 |
+| <a name="requirement_random"></a> [random](#requirement\_random) | ~> 3.5 |
 
 ## Modules
 
@@ -14,10 +15,10 @@
 |------|--------|---------|
 | <a name="module_log_analytics_workspace"></a> [log\_analytics\_workspace](#module\_log\_analytics\_workspace) | terraform.registry.launch.nttdata.com/module_primitive/log_analytics_workspace/azurerm | ~> 1.0 |
 | <a name="module_network_security_group"></a> [network\_security\_group](#module\_network\_security\_group) | terraform.registry.launch.nttdata.com/module_primitive/network_security_group/azurerm | ~> 1.0 |
-| <a name="module_network_watcher"></a> [network\_watcher](#module\_network\_watcher) | terraform.registry.launch.nttdata.com/module_primitive/network_watcher/azurerm | ~> 1.0 |
-| <a name="module_network_watcher_flow_log"></a> [network\_watcher\_flow\_log](#module\_network\_watcher\_flow\_log) | terraform.registry.launch.nttdata.com/module_primitive/network_watcher_flow_log/azurerm | ~> 1.0 |
+| <a name="module_network_watcher"></a> [network\_watcher](#module\_network\_watcher) | git::https://github.com/launchbynttdata/tf-azurerm-module_primitive-network_watcher.git | feat%21/copier-conversion |
+| <a name="module_network_watcher_flow_log"></a> [network\_watcher\_flow\_log](#module\_network\_watcher\_flow\_log) | ../.. | n/a |
 | <a name="module_resource_group"></a> [resource\_group](#module\_resource\_group) | terraform.registry.launch.nttdata.com/module_primitive/resource_group/azurerm | ~> 1.0 |
-| <a name="module_resource_names"></a> [resource\_names](#module\_resource\_names) | terraform.registry.launch.nttdata.com/module_library/resource_name/launch | ~> 1.0 |
+| <a name="module_resource_names"></a> [resource\_names](#module\_resource\_names) | terraform.registry.launch.nttdata.com/module_library/resource_name/launch | ~> 2.0 |
 | <a name="module_storage_account"></a> [storage\_account](#module\_storage\_account) | terraform.registry.launch.nttdata.com/module_primitive/storage_account/azurerm | ~> 1.0 |
 
 ## Resources

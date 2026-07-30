@@ -11,8 +11,7 @@
 // limitations under the License.
 
 module "network_watcher_flow_log" {
-  source  = "terraform.registry.launch.nttdata.com/module_primitive/network_watcher_flow_log/azurerm"
-  version = "~> 1.0"
+  source = "../.."
 
   network_watcher_flow_log_name = local.network_watcher_flow_log_name
   network_watcher_name          = module.network_watcher.name
@@ -57,8 +56,7 @@ module "storage_account" {
 
 
 module "network_watcher" {
-  source  = "terraform.registry.launch.nttdata.com/module_primitive/network_watcher/azurerm"
-  version = "~> 1.0"
+  source = "git::https://github.com/launchbynttdata/tf-azurerm-module_primitive-network_watcher.git?ref=feat%21/copier-conversion"
 
   network_watcher_name = local.network_watcher_name
   location             = var.location
@@ -94,7 +92,7 @@ module "log_analytics_workspace" {
 
 module "resource_names" {
   source  = "terraform.registry.launch.nttdata.com/module_library/resource_name/launch"
-  version = "~> 1.0"
+  version = "~> 2.0"
 
   for_each = var.resource_names_map
 
