@@ -24,7 +24,7 @@ resource_names_map = {
     max_length = 80
   }
 }
-location = "centralus"
+location = "norwayeast"
 enabled  = true
 retention_policy = {
   days    = 7
