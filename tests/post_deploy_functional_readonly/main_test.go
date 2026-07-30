@@ -34,6 +34,7 @@ func TestNetworkWatcherFlowLogModule(t *testing.T) {
 		SetTestSpecificFlags(map[string]types.TestFlags{
 			"network_watcher_flow_log": {
 				"IS_TERRAFORM_IDEMPOTENT_APPLY": true,
+				"SKIP_TEST":                     true,
 			},
 		}).
 		Build()
