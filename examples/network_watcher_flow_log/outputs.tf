@@ -11,12 +11,12 @@
 // limitations under the License.
 
 output "network_watcher_id" {
-  value       = module.network_watcher.id
+  value       = data.azurerm_network_watcher.this.id
   description = "The ID of the Network Watcher."
 }
 
 output "network_watcher_name" {
-  value       = module.network_watcher.name
+  value       = data.azurerm_network_watcher.this.name
   description = "The name of the Network Watcher."
 }
 
