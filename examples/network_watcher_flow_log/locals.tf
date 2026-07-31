@@ -11,7 +11,6 @@
 // limitations under the License.
 
 locals {
-  network_watcher_name          = module.resource_names["network_watcher"].standard
   resource_group_name           = module.resource_names["resource_group"].standard
   network_watcher_flow_log_name = module.resource_names["network_watcher_flow_log"].standard
   storage_account_name          = module.resource_names["storage_account"].minimal_random_suffix_without_any_separators

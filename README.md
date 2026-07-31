@@ -103,19 +103,13 @@ If `make check` target is successful, developer is good to commit the code to pr
 - runs `conftests`. `conftests` make sure `policy` checks are successful.
 - runs `terratest`. This is integration test suit.
 - runs `opa` tests
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- BEGIN_TF_DOCS -->
 ## Requirements
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | <= 1.5.5 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.0 |
 | <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~> 3.77 |
-
-## Providers
-
-| Name | Version |
-|------|---------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | 3.99.0 |
 
 ## Modules
 
@@ -131,14 +125,14 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_enabled"></a> [enabled](#input\_enabled) | Is the Network Watcher Flow Log enabled? | `bool` | `true` | no |
+| <a name="input_network_security_group_id"></a> [network\_security\_group\_id](#input\_network\_security\_group\_id) | The ID of the Network Security Group to which the Network Watcher Flow Log will be applied | `string` | n/a | yes |
 | <a name="input_network_watcher_flow_log_name"></a> [network\_watcher\_flow\_log\_name](#input\_network\_watcher\_flow\_log\_name) | The name of the Network Watcher Flow Log | `string` | n/a | yes |
 | <a name="input_network_watcher_name"></a> [network\_watcher\_name](#input\_network\_watcher\_name) | The name of the Network Watcher | `string` | n/a | yes |
 | <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | The name of the resource group in which the Network Watcher Flow Log will be created | `string` | n/a | yes |
-| <a name="input_network_security_group_id"></a> [network\_security\_group\_id](#input\_network\_security\_group\_id) | The ID of the Network Security Group to which the Network Watcher Flow Log will be applied | `string` | n/a | yes |
+| <a name="input_retention_policy"></a> [retention\_policy](#input\_retention\_policy) | The retention policy for the Network Watcher Flow Log | <pre>object({<br/>    enabled = bool<br/>    days    = number<br/>  })</pre> | `null` | no |
 | <a name="input_storage_account_id"></a> [storage\_account\_id](#input\_storage\_account\_id) | The ID of the Storage Account in which the Network Watcher Flow Log will be stored | `string` | n/a | yes |
-| <a name="input_enabled"></a> [enabled](#input\_enabled) | Is the Network Watcher Flow Log enabled? | `bool` | `true` | no |
-| <a name="input_retention_policy"></a> [retention\_policy](#input\_retention\_policy) | The retention policy for the Network Watcher Flow Log | <pre>object({<br>    enabled = bool<br>    days    = number<br>  })</pre> | `null` | no |
-| <a name="input_traffic_analytics"></a> [traffic\_analytics](#input\_traffic\_analytics) | The traffic analytics settings for the Network Watcher Flow Log | <pre>object({<br>    enabled               = bool<br>    workspace_id          = string<br>    workspace_region      = string<br>    workspace_resource_id = string<br>    interval_in_minutes   = number<br>  })</pre> | `null` | no |
+| <a name="input_traffic_analytics"></a> [traffic\_analytics](#input\_traffic\_analytics) | The traffic analytics settings for the Network Watcher Flow Log | <pre>object({<br/>    enabled               = bool<br/>    workspace_id          = string<br/>    workspace_region      = string<br/>    workspace_resource_id = string<br/>    interval_in_minutes   = number<br/>  })</pre> | `null` | no |
 
 ## Outputs
 
@@ -146,4 +140,4 @@ No modules.
 |------|-------------|
 | <a name="output_id"></a> [id](#output\_id) | The ID of the Network Watcher Flow Log instance. |
 | <a name="output_name"></a> [name](#output\_name) | The name of the Network Watcher Flow Log. |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- END_TF_DOCS -->
