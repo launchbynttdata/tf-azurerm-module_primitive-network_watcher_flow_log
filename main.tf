@@ -41,4 +41,5 @@ resource "azurerm_network_watcher_flow_log" "network_watcher_flow_log" {
     }
   }
 
+  tags = local.tags
 }
