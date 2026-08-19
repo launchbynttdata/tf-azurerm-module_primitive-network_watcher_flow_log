@@ -132,6 +132,7 @@ No modules.
 | <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | The name of the resource group in which the Network Watcher Flow Log will be created | `string` | n/a | yes |
 | <a name="input_retention_policy"></a> [retention\_policy](#input\_retention\_policy) | The retention policy for the Network Watcher Flow Log | <pre>object({<br/>    enabled = bool<br/>    days    = number<br/>  })</pre> | `null` | no |
 | <a name="input_storage_account_id"></a> [storage\_account\_id](#input\_storage\_account\_id) | The ID of the Storage Account in which the Network Watcher Flow Log will be stored | `string` | n/a | yes |
+| <a name="input_tags"></a> [tags](#input\_tags) | (Optional) A mapping of tags to assign to the resource. | `map(string)` | `{}` | no |
 | <a name="input_traffic_analytics"></a> [traffic\_analytics](#input\_traffic\_analytics) | The traffic analytics settings for the Network Watcher Flow Log | <pre>object({<br/>    enabled               = bool<br/>    workspace_id          = string<br/>    workspace_region      = string<br/>    workspace_resource_id = string<br/>    interval_in_minutes   = number<br/>  })</pre> | `null` | no |
 
 ## Outputs

@@ -12,7 +12,7 @@
 
 locals {
   default_tags = {
-    provisioner = "terraform"
+    provisioner   = "terraform"
     resource_name = var.network_watcher_flow_log_name
   }
   tags = merge(local.default_tags, var.tags)
