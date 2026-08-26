@@ -30,10 +30,10 @@ func TestComposableNetworkWatcherFlowLog(t *testing.T, ctx types.TestContext) {
 	}
 
 	t.Run("doesNetworkWatcherFlowLogExist", func(t *testing.T) {
-		resourceGroupName := terraform.Output(t, ctx.TerratestTerraformOptions(), "resource_group_name")
-		networkWatcherName := terraform.Output(t, ctx.TerratestTerraformOptions(), "network_watcher_name")
-		networkWatcherFlowLogId := terraform.Output(t, ctx.TerratestTerraformOptions(), "id")
-		networkWatcherFlowLogName := terraform.Output(t, ctx.TerratestTerraformOptions(), "name")
+		resourceGroupName := terraform.OutputContext(t, context.Background(), ctx.TerratestTerraformOptions(), "resource_group_name")
+		networkWatcherName := terraform.OutputContext(t, context.Background(), ctx.TerratestTerraformOptions(), "network_watcher_name")
+		networkWatcherFlowLogId := terraform.OutputContext(t, context.Background(), ctx.TerratestTerraformOptions(), "id")
+		networkWatcherFlowLogName := terraform.OutputContext(t, context.Background(), ctx.TerratestTerraformOptions(), "name")
 
 		networkWatcherFlowLogs, err := flowLogsClient.Get(context.Background(), resourceGroupName, networkWatcherName, networkWatcherFlowLogName, nil)
 		if err != nil {
